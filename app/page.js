@@ -16,19 +16,19 @@ export default function Home() {
   }
   return (
       <div className="flex flex-col items-center justify-center bg-white w-screen h-screen " >
-        <div className="w-full aspect-square relative " >
+        <div className="w-full h-[60%] relative " >
         <motion.main 
-        className="grid grid-cols-3 relative w-[600px] h-[300px] mx-auto "
+        className="grid grid-cols-4 grid-rows-3 gap-2 relative w-1/2 aspect-video mx-auto "
         >
-        <motion.div className="flex flex-col items-center justify-center w-1/6 h-1/3 bg-red-100 
-        shadow-lg rounded-[24px]  top-1/3 left-1/3 rotate-[26deg] absolute " 
+        <motion.div className="flex flex-col items-center justify-center col-span-1 row-span-2 bg-red-100 
+        shadow-lg rounded-[24px]  top-1/3 left-1/3  " 
         initial={{rotate: 26}}          
         whileHover={{y: -16, rotate: 0}}
         animate={{position: status, rotate: status === "static" ? 0 : 26,}}
         layout
         >box 6</motion.div>
           <motion.div 
-          className="flex flex-col items-center justify-center w-4/6 h-2/3 bg-yellow-100 
+          className="flex flex-col items-center justify-center col-span-2 row-span-2 bg-yellow-100 
           shadow-lg rounded-[24px]  top-1/3 left-1/3  " 
           initial={{rotate: 22}}          
           whileHover={{y: -16, rotate: 0}}
@@ -36,7 +36,7 @@ export default function Home() {
           layout
           >box 5</motion.div>
           <motion.div 
-          className="flex flex-col items-center justify-center w-2/6 h-1/3 bg-blue-100 
+          className="flex flex-col items-center justify-center cols-span-1 row-span-1 bg-blue-100 
           shadow-lg rounded-[24px]  top-1/3 left-1/3  " 
           initial={{rotate: 18}}          
           whileHover={{y: -16, rotate: 0}}
@@ -44,16 +44,16 @@ export default function Home() {
           layout
           >box 4</motion.div>
           <motion.div 
-          className="flex flex-col items-center justify-center w-1/3 h-2/3 bg-teal-100 
-          shadow-lg rounded-[24px]  top-1/3 left-1/3 rotate-[18deg]  absolute" 
+          className="flex flex-col items-center justify-center col-span-1 row-span-2 bg-teal-100 
+          shadow-lg rounded-[24px]  top-1/3 left-1/3 " 
           initial={{rotate: 14}}          
           whileHover={{y: -16, rotate: 0}}
           animate={{position: status, rotate: status === "static" ? 0 : 14,}}
           layout
           >box 3</motion.div>
           <motion.div 
-          className="flex flex-col items-center justify-center w-4/6 bg-orange-100 
-          shadow-lg rounded-[24px]  top-1/3 left-1/3 rotate-[10deg] absolute" 
+          className="flex flex-col items-center justify-center col-span-1 row-span-1 bg-orange-100 
+          shadow-lg rounded-[24px]  top-1/3 left-1/3 " 
           initial={{rotate:10}}
           whileHover={{y: -16, rotate: 0}}
           animate={{position: status, rotate: status === "static" ? 0 : 10,}}
@@ -62,7 +62,7 @@ export default function Home() {
             <Image src={profile} className="rounded-[24px] w-[226px] aspect-square" />
           </motion.div>
           <motion.div 
-          className="flex flex-col items-center justify-between w-1/6 h-2/3
+          className="flex flex-col items-center justify-between col-span-2 row-span-1
           shadow-lg rounded-[24px]  top-1/3 left-1/3 p-2 bg-white absolute cursor-pointer " 
           onClick={()=> setStatus("static")}
           initial={{rotate: 6}}          
